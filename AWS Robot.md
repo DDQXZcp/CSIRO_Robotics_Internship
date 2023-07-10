@@ -177,6 +177,6 @@ ros2 run turtlebot3_teleop teleop_keyboard
 
 also, t3.medium is not enough, I change to c5.xlarge for more computation resources.
 
-![Untitled](AWS%20Robot%2076fc2f9443194ceba6a3eb149f1916cf/Untitled.png)
+![Untitled](AWS%20Robot/Untitled.png)
 
 [Gazebo  : Tutorial : ROS Depth Camera Integration](http://classic.gazebosim.org/tutorials?tut=ros_depth_camera&cat=connect_ros)
