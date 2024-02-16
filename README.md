@@ -9,3 +9,6 @@ SLAM is a computational problem in robotics of constructing or updating a map of
 
 ## Integration of Visual Sensors with the Robot
 You need to understand how to connect and use the visual sensors with the robot. This involves reading data from the sensors, possibly cleaning and processing the data, and then using this data within your SLAM algorithm. Depending on the specific sensor you're using, you might need to check for specific ROS2 drivers or libraries.
+
+
+[Benefit](https://sigmoidal.ai/en/orb-slam-3-a-tool-for-3d-mapping-and-localization/)
