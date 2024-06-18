@@ -305,3 +305,43 @@ The ROS node will look like this
 ![Untitled](Robot_Setup_Procedure/vnc.png)
 
 I found that the Jetson cannot boot normally without a monitor. Also, the VNC does not work if the monitor loses connection.
+
+# Software Setup
+
+Launching Camera
+
+```jsx
+source ~/catkin_ws/devel/setup.sh
+roslaunch rs_camera_vins.launch
+rviz # (Optional) Check color and depth frames
+```
+
+Launching MID-360
+
+```jsx
+source ~/ws_livox/devel/setup.sh
+roslaunch livox_ros_driver2 rviz_MID360.launch
+```
+
+Launch DLO
+
+```jsx
+source ~/ws_livox/devel/setup.sh
+roslaunch direct_lidar_odometry dlo.launch \
+pointcloud_topic:=/livox/lidar \
+imu_topic:=/livox/imu
+```
+
+/camera/color/camera_info
+
+/camera/color/image_raw
+
+/camera/aligned_depth_to_color/camera_info
+
+/camera/aligned_depth_to_color/image_raw
+
+/robot/dlo/odom_node/pose (Export trajectory directly)
+
+```jsx
+rosbag record -O rgbd_dlo.bag /camera/color/camera_info /camera/color/image_raw /camera/aligned_depth_to_color/camera_info /camera/aligned_depth_to_color/image_raw /robot/dlo/odom_node/pose 
+```
